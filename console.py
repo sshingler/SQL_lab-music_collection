@@ -17,4 +17,10 @@ album_repository.save(album_1)
 album_2 = Album ("Physical Graffiti", "Rock", artist_2)
 album_repository.save(album_2)
 
-pdb.set_trace()
+for artist in artist_repository.select_all():
+    print(artist)
+
+for album in album_repository.select_all():
+    print(album)
+
+#pdb.set_trace()
