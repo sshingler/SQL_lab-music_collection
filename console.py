@@ -4,9 +4,8 @@ from models.artist import Artist
 import repositories.album_repository as album_repository 
 import repositories.artist_repository as artist_repository 
 
-
-
-
+album_repository.delete_all()
+artist_repository.delete_all()
 
 artist_1 = Artist("AC/DC")
 artist_repository.save(artist_1)
@@ -17,19 +16,5 @@ album_1 = Album ("Back in Black", "Rock", artist_1)
 album_repository.save(album_1)
 album_2 = Album ("Physical Graffiti", "Rock", artist_2)
 album_repository.save(album_2)
-
-album_repository.save(Album)
-artist_repository.save(Artist)
-
-album_repository.delete_all()
-artist_repository.delete_all()
-
-artist_repository.select_all()
-album_repository.select_all()
-
-artist_repository.select(id)
-album_repository.select(id)
-
-
 
 pdb.set_trace()
